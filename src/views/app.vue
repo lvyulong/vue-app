@@ -8,7 +8,12 @@
 export default {
   name: "app",
   data() {
-    return {}
+    return {
+      tip:'主应用部分'
+    }
+  },
+  created: function(){
+  
   }
 };
 </script>

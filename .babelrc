@@ -1,8 +1,24 @@
 {
   "presets": [
-      ["env", { "modules": false }],
-      "stage-2"
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2"
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": [
+    "transform-runtime",
+    [
+      "component",
+      [
+        {
+          "libraryName": "mint-ui",
+          "style": true
+        }
+      ]
+    ]
+  ],
   "comments": false
 }

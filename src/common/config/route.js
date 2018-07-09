@@ -22,20 +22,7 @@ export default {
     { state: 'app' },
     // 我的账户
     { state: 'app.user', type: 'blank' },
-    { state: 'app.user.index' },
-    // 我的计划
-    { state: 'app.plan', type: 'blank' },
-    // 前端
-    { state: 'app.plan.forward', type: 'blank' },
-    { state: 'app.plan.forward.index' },
-    // 后端
-    { state: 'app.plan.backward', type: 'blank' },
-    { state: 'app.plan.backward.index' },
-    // 运动
-    { state: 'app.plan.sport', type: 'blank' },
-    { state: 'app.plan.sport.index' },
-    // 休息
-    { state: 'app.plan.rest', type: 'blank' },
-    { state: 'app.plan.rest.index' }
+    { state: 'app.user.index'},
+
   ]
 };

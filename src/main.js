@@ -2,9 +2,10 @@
 import 'app/assets/style/main.less';
 
 import Vue from 'vue';
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css'
 import Router from 'vue-router';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+
 
 import App from 'app/App.vue';
 import routes from 'app/routes';
@@ -13,7 +14,7 @@ import 'app/common/config/global';
 
 // 使用插件
 Vue.use(Router);
-Vue.use(ElementUI);
+Vue.use(MintUI);
 
 // 路由
 const router = new Router({routes});

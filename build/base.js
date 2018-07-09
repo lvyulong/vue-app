@@ -10,7 +10,7 @@ const webpackBaseConfig = {
     new VueLoaderPlugin(),
     // 生成入口html
     new HtmlWebpackPlugin({
-      title:'Vue Demo',
+      template:'index.html',
       favicon:path.resolve(__dirname,'../favicon.ico')
     }),
   ],

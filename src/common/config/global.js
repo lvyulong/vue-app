@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import Back from'app/common/component/Back.vue';
+
 
 // 组件
 const config = {
   component: [
-    {name:'back',component:Back}
+ 
   ],
 
   directive: [
