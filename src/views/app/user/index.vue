@@ -35,7 +35,9 @@ export default {
       ]
     };
   },
-  created: function() {}
+  created: function() {
+    console.log(11)
+  }
 };
 </script>
 <style lang="less" scoped>
