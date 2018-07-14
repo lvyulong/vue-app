@@ -1,7 +1,6 @@
 const path = require('path');
 const {VueLoaderPlugin} = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const webpackBaseConfig = {
   entry: path.resolve(__dirname,'../src/main.js'),
 
@@ -12,12 +11,13 @@ const webpackBaseConfig = {
     new HtmlWebpackPlugin({
       template:'index.html',
       favicon:path.resolve(__dirname,'../favicon.ico')
-    }),
+    })
   ],
   resolve:{
     alias: {
       app: path.resolve(__dirname, '../src/'),
-    }
+    },
+    extensions: ['.js', '.vue', '.json']
   },
   module:{
     rules:[
@@ -58,7 +58,7 @@ const webpackBaseConfig = {
       {
         test:/\.(woff2?|eot|ttf|svg|otf)$/,
         use:{
-          loader:'url-loader',
+          loader:'file-loader',
           options:{
             limit:10000,
             name:'font/[name].[hash:7].[ext]'
@@ -68,5 +68,4 @@ const webpackBaseConfig = {
     ]
   }
 };
-
 module.exports = webpackBaseConfig;

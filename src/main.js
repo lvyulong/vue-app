@@ -1,10 +1,12 @@
 
 import 'app/assets/style/main.less';
+import 'weui';
 
 import Vue from 'vue';
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import Router from 'vue-router';
+
 
 
 import App from 'app/App.vue';

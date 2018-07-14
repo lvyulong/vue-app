@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var connection = require('../../dataBase/index');
 
 router.use(function(req,res,next){
   console.log(`foo is using!`);
@@ -7,9 +8,28 @@ router.use(function(req,res,next){
 
 router.get('/',function(req,res,next){
   var data = {
-    name: 'foo'
+    name: 'foo1'
   }
-  res.send(data);
+  console.log(req.query)
+  const perPage = 20;
+  let page = (req.query &&  req.query.page) || 1;
+  let minLimit = (page - 1) * 20 + 1;
+  let maxLimit = (page) * 20;
+  connection.query(`select id,name,created_at from cv_position limit ${perPage} offset ${perPage * (page - 1)}`,function(err,rows,fields){
+    if(err){
+      throw err;
+    }
+    res.send({
+      items:rows,
+      currentPage:page,
+      perPage:perPage
+    });
+    // connection.end();
+  })
+
+
+
+  // res.send(data);
 })
 router.get('/test/:id',function(req,res,next){
   var data = {

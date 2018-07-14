@@ -13,16 +13,19 @@
 import handle from 'app/common/config/handle';
 
 export default {
-  default: 'appUserIndex',
+  default: 'appHome',
   routes: [
     // 登陆
     { state: 'login' },
 
     // 应用主体
     { state: 'app' },
-    // 我的账户
-    { state: 'app.user', type: 'blank' },
-    { state: 'app.user.index'},
+    // 首页
+    { state: 'app.home' },
+    // 列表页
+    { state: 'app.position' ,type:'blank'},
+    { state: 'app.position.index' },
+
 
   ]
 };

@@ -16,7 +16,7 @@ const webpackDevConfig = merge(webpackBaseConfig,{
   devServer:{
     contentBase:path.resolve(__dirname,'../dist'),
     compress:true,
-    port:80,
+    port:8080,
     // 可以局域网访问，访问地址：http://本机ip
     host:'0.0.0.0',
     // 编译的错误或警告信息是否显示
@@ -30,7 +30,7 @@ const webpackDevConfig = merge(webpackBaseConfig,{
       //   target: "http://localhost:3000",
       //   pathRewrite: {"^/api" : ""}
       // }
-      "/api": "http://localhost:3000"
+      "/api": "http://localhost:3001"
     }
   },
   plugins: [
