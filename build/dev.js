@@ -17,6 +17,7 @@ const webpackDevConfig = merge(webpackBaseConfig,{
     contentBase:path.resolve(__dirname,'../dist'),
     compress:true,
     port:80,
+    // 可以局域网访问，访问地址：http://本机ip
     host:'0.0.0.0',
     // 编译的错误或警告信息是否显示
     overlay: {
