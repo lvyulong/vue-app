@@ -1,12 +1,12 @@
 var router = require('express').Router();
 
-var apis = ['foo','bar']
+var apis = ['auth','test'];
 
 
 router.use(function(req,res,next){
-  console.log(`Api is using!`);
+  // console.log(`auth is using!`);
   next();
-})
+});
 
 for(var i=0;i<apis.length;i++){
   var path = `/${apis[i]}`;

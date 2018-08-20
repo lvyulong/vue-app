@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import 'app/assets/style/main.less';
+import 'font-awesome/less/font-awesome.less';
 import 'weui';
 // 自定义文件
 import App from 'app/App.vue';
@@ -17,10 +18,10 @@ import underscore from 'underscore';
 window.global_data = {
     //除非需要写死域名的地方才会用到，否则需用location.origin动态获取
     domain: {
-        dev: 'http://app.rqd.hrtps.com',
-        prod: 'https://app.rq.hrtps.com',
+        // dev: 'http://app.rqd.hrtps.com',
+        // prod: 'https://app.rq.hrtps.com',
     },
-    devIp: '10.21.109.77'
+    // devIp: '10.21.109.77'
 };
 if (location.hostname === 'localhost' || location.hostname === global_data.devIp) {
     global_data.isDev = 1;

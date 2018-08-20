@@ -2,12 +2,19 @@
 @import 'color.less';
 @import 'font.less';
 @import 'plugin.less';
+
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: #efeff4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -16,8 +23,37 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0
+  margin: 0
 }
-a {
-    text-decoration: none;
+
+
+a,a:hover,a:active,a:visited,a:link,a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.page {
+  min-height: 100vh;
+  position: relative;
+  background-color: white;
+  .footer {
+    background: #6895FE;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }

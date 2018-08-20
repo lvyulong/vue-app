@@ -9,13 +9,18 @@ const webpackBaseConfig = {
     new VueLoaderPlugin(),
     // 生成入口html
     new HtmlWebpackPlugin({
-      template:'index.html',
-      favicon:path.resolve(__dirname,'../favicon.ico')
+        template:'index.html',
+        favicon:path.resolve(__dirname,'../favicon.ico')
     })
   ],
   resolve:{
     alias: {
       app: path.resolve(__dirname, '../src/'),
+        // 快捷用法：api、image、style
+        api: path.resolve(__dirname, '../src/common/resource/api/'),
+        image: path.resolve(__dirname, '../src/assets/image/'),
+        style: path.resolve(__dirname, '../src/assets/style/'),
+        component: path.resolve(__dirname, '../src/common/component/'),
     },
     extensions: ['.js', '.vue', '.json']
   },

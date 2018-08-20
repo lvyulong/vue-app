@@ -9,7 +9,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use('/api',Api);
 
-var server = app.listen(3001,function(){
+var server = app.listen(3000,function(){
     var port = server.address().port;
     console.log(`Server is running at port:${port}`);
-})
+});
