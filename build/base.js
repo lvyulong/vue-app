@@ -65,7 +65,6 @@ const webpackBaseConfig = {
         use:{
           loader:'file-loader',
           options:{
-            limit:10000,
             name:'font/[name].[hash:7].[ext]'
           }
         }

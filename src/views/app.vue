@@ -24,11 +24,11 @@
             ];
             axios.all(reqArray).then(function (res) {
                 next(vm => {
-                    var resArray =  {
-                        key:'local',
-                        val:res[0].data.data
+                    var resArray = {
+                        key: 'local',
+                        val: res[0].data.data
                     };
-                    vm.$store.commit('setProp',resArray);
+                    vm.$store.commit('setProp', resArray);
                 })
             });
 
