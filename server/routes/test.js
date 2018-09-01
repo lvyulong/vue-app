@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var mysql = require('mysql');
-var dbConfig = require("../../dbConfig");
+var dbConfig = require("../dbConfig");
 
 router.use(function (req, res, next) {
     console.log(`auth is using!`);
