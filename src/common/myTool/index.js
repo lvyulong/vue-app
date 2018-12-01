@@ -95,7 +95,7 @@ function extend(obj1, obj2) {
 }
 //清除对象中的无效字段（空字符串，空数组，空对象）
 function clearInvalidProp(obj) {
-    for (key in obj){
+    for (var key in obj){
         if ((obj[key]==={})||(obj[key]===[])||(!obj[key])){
             delete obj[key]
         }
@@ -105,7 +105,7 @@ function clearInvalidProp(obj) {
 //将对象转化成url的查询字符串
 function toUrlString(obj) {
     var str = '';
-    for (key in obj){
+    for (var key in obj){
         str += key + '=' + obj[key] + '&';
     }
     str = str.substr(0,str.length-1);

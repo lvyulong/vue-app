@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'development';
 const merge = require('webpack-merge');
 const webpackBaseConfig = require('./base');
 const path = require('path');
@@ -7,8 +8,8 @@ const webpackDevConfig = merge(webpackBaseConfig, {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'script/[name].[hash].js',
-        chunkFilename: 'script/[name].[hash].js'
+        filename: `lib${CURRENT_VERSION}/script/[name].js`,
+        chunkFilename: `lib${CURRENT_VERSION}/script/[name].js`,
         // publicPath:'./dist/'
     },
     // 代码映射，方便调错，会把源代码的错误行数报出来
@@ -16,7 +17,8 @@ const webpackDevConfig = merge(webpackBaseConfig, {
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
         compress: true,
-        port: 8081,
+        port: 8080,
+        // 可以局域网访问，访问地址：http://本机ip
         host: '0.0.0.0',
         // 编译的错误或警告信息是否显示
         overlay: {
@@ -26,10 +28,10 @@ const webpackDevConfig = merge(webpackBaseConfig, {
         hot: true,
         proxy: {
             "/api": {
-                target: "http://admin.rc-trainingd.hrtps.com",
+                target: "http://localhost:3000",
                 // pathRewrite: {"^/api" : ""},
                 changeOrigin: true
-            },
+            }
         }
     },
     plugins: [
@@ -45,8 +47,8 @@ const webpackDevConfig = merge(webpackBaseConfig, {
         rules: [
             // css文件编译
             {
-                test:/\.css$/,
-                use:['style-loader','css-loader','postcss-loader']
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader']
             },
             // less文件编译
             {

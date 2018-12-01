@@ -38,7 +38,7 @@ export default class Resource {
                     var actionParam = names[1];
                     that[v.name] = function (option) {
                         if(!option.params){
-                            option.params = {};
+                            option.params = {};                       
                         }
                         if(!option.params[actionParam]){
                             option.params[actionParam] = ''
@@ -49,7 +49,7 @@ export default class Resource {
                         };
                         option = Object.assign({}, this[baseOption], selfOption, option);
                         return axios(option)
-                    }
+                    }                    
                 } else {
                     that[v.name] = function (option) {
                         var selfOption = {
@@ -60,7 +60,7 @@ export default class Resource {
                         return axios(option)
                     }
                 }
-
+                
             })
         }
     }

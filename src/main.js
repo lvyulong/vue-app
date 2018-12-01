@@ -18,8 +18,8 @@ import underscore from 'underscore';
 window.global_data = {
     //除非需要写死域名的地方才会用到，否则需用location.origin动态获取
     domain: {
-        // dev: 'http://app.rqd.hrtps.com',
-        // prod: 'https://app.rq.hrtps.com',
+        // dev: 'http://xxx.xxx.xxx.com',
+        // prod: 'http://xxx.xxx.xxx.com',
     },
     // devIp: '10.21.109.77'
 };

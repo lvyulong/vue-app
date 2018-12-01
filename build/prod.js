@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'production';
 const merge = require('webpack-merge');
 const webpackBaseConfig = require('./base');
 const path = require('path');
@@ -11,9 +12,10 @@ const webpackProdConfig = merge(webpackBaseConfig, {
     比如optimization.mnimize在生产环境默认为true，压缩代码*/
     mode: 'production',
     output: {
-        path: path.resolve(__dirname, '../dist'),
-        filename: 'script/[name].[chunkhash].js',
-        chunkFilename: 'script/[name].[chunkhash].js',
+        path: path.resolve(__dirname, '../server/static'),
+        filename: `lib${CURRENT_VERSION}/script/[name].js`,
+        // 非入口(non-entry) chunk 文件的名称
+        chunkFilename: `lib${CURRENT_VERSION}/script/[name].js`,
         publicPath: './'
     },
     plugins: [
@@ -25,14 +27,14 @@ const webpackProdConfig = merge(webpackBaseConfig, {
         }),
         // 提取css文件为单独的文件
         new MiniCssExtractPlugin({
-            filename: 'style/[name].[hash].css',
-            chunkFilename: 'style/[id].[hash].css'
+            filename: `lib${CURRENT_VERSION}/style/[name].css`,
+            chunkFilename: `lib${CURRENT_VERSION}/style/[id].css`
         }),
         // 压缩css文件
         new OptimizeCssAssetsWebpackPlugin(),
         // 每次构建清除dist
-        new CleanWebpackPlugin(['dist'], {
-            root: path.resolve(__dirname, '../')
+        new CleanWebpackPlugin(['static'], {
+            root: path.resolve(__dirname, '../server/')
         }),
     ],
     module: {
