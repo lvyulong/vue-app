@@ -13,7 +13,7 @@
 import handle from 'app/common/config/handle';
 
 export default {
-  default: 'appHome',
+  default: 'app.home',
   routes: [
     // 登陆
     { state: 'login' },
