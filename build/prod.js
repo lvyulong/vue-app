@@ -12,7 +12,7 @@ const webpackProdConfig = merge(webpackBaseConfig, {
     比如optimization.mnimize在生产环境默认为true，压缩代码*/
     mode: 'production',
     output: {
-        path: path.resolve(__dirname, '../server/static'),
+        path: path.resolve(__dirname, '../dist'),
         filename: `lib${CURRENT_VERSION}/script/[name].js`,
         // 非入口(non-entry) chunk 文件的名称
         chunkFilename: `lib${CURRENT_VERSION}/script/[name].js`,
@@ -33,8 +33,8 @@ const webpackProdConfig = merge(webpackBaseConfig, {
         // 压缩css文件
         new OptimizeCssAssetsWebpackPlugin(),
         // 每次构建清除dist
-        new CleanWebpackPlugin(['static'], {
-            root: path.resolve(__dirname, '../server/')
+        new CleanWebpackPlugin(['dist'], {
+            root: path.resolve(__dirname, '../')
         }),
     ],
     module: {

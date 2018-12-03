@@ -18,12 +18,12 @@ const webpackBaseConfig = {
     alias: {
       app: path.resolve(__dirname, '../src/'),
         // 快捷用法：api、image、style
-        api: path.resolve(__dirname, '../src/common/resource/api/'),
+        api: path.resolve(__dirname, '../src//api/'),
         image: path.resolve(__dirname, '../src/assets/image/'),
         style: path.resolve(__dirname, '../src/assets/style/'),
         component: path.resolve(__dirname, '../src/common/component/'),
         filter: path.resolve(__dirname, '../src/common/filter/'),
-        config: path.resolve(__dirname, '../src/common/config/'),
+        config: path.resolve(__dirname, '../src/config/'),
     },
     extensions: ['.js', '.vue', '.json']
   },

@@ -1,7 +1,7 @@
-import icon1 from 'app/assets/image/1.png';
-import icon2 from 'app/assets/image/2.png';
-import icon3 from 'app/assets/image/3.png';
-import icon4 from 'app/assets/image/4.png';
+import icon1 from 'image/1.png';
+import icon2 from 'image/2.png';
+import icon3 from 'image/3.png';
+import icon4 from 'image/4.png';
 
 export default [
     {

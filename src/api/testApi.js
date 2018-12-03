@@ -1,4 +1,4 @@
-import Resource from 'app/common/resource/base';
+import Resource from 'app/common/resource';
 
 const testApi = new Resource({
     url: 'test',

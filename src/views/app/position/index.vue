@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import testApi from "app/common/resource/api/testApi";
+    import testApi from "api/testApi";
     export default {
         name: "appPositionIndex",
         data() {

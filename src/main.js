@@ -4,16 +4,17 @@ import Vuex from 'vuex';
 import Router from 'vue-router';
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css'
+import underscore from 'underscore';
 import 'app/assets/style/main.less';
 import 'font-awesome/less/font-awesome.less';
 import 'weui';
 // 自定义文件
-import App from 'app/App.vue';
-import routes from 'app/routes';
-import 'app/common/config/global';
+import main from 'app/main.vue';
+import routes from 'config/route';
+
 import storeConfig from 'app/common/store/index';
 import myTool from 'app/common/myTool/index';
-import underscore from 'underscore';
+import 'config/global';
 
 window.global_data = {
     //除非需要写死域名的地方才会用到，否则需用location.origin动态获取
@@ -41,14 +42,12 @@ const root = document.createElement('div');
 document.body.appendChild(root);
 const vm = new Vue({
     render: (h) => {
-        return h(App)
+        return h(main)
     },
     router,
     store
 });
 vm.$mount(root);
-
 // 将vue实例绑定到全局，方便使用其属性
 window.vm = vm;
-
 export default vm;

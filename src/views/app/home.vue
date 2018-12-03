@@ -17,7 +17,7 @@
 </template>
 <script>
     import menus from 'app/common/component/menus';
-    import menusData from 'app/common/config/menus';
+    import menusData from 'config/menus';
 
     export default {
         name: "home",
