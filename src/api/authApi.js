@@ -1,6 +1,5 @@
-import Resource from 'app/common/resource';
-
-const authApi = new Resource({
+import Vue from 'vue';
+const authApi = new Vue.Resource({
     url: 'auth',
     actions: [
         {

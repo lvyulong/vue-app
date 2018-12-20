@@ -3,14 +3,14 @@
         <div class="banner">
             <mt-swipe :auto="0">
                 <mt-swipe-item>
-                    <img src="~app/assets/image/1.jpg" alt="">
+                    <img src="~app/assets/image/banner1.png" alt="">
                 </mt-swipe-item>
                 <mt-swipe-item>
-                    <img src="~app/assets/image/2.jpg" alt="">
+                    <img src="~app/assets/image/banner2.png" alt="">
                 </mt-swipe-item>
             </mt-swipe>
         </div>
-        <div>
+        <div class="mt1rem">
             <menus :config="menusData"></menus>
         </div>
     </div>
@@ -39,7 +39,7 @@
 <style lang="less" scoped>
     .banner {
         width: 100%;
-        height: 200px;
+        height: 150px;
         background: #ccc;
         img {
             width: 100%;

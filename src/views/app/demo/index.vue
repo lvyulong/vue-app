@@ -1,13 +1,13 @@
 <template>
     <div>
-        测试页面
+        index 页面
     </div>
 </template>
 
 <script>
     import testApi from "api/testApi";
     export default {
-        name: "appPositionIndex",
+        name: "appDemoIndex",
         data() {
             return {
 

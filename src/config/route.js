@@ -11,7 +11,6 @@
 // beforeEnter 此处只能做一些认证之类的操作，但是无法往组件里面传数据；推荐在组件内使用beforeRouterEnter操作，next可以有回调;
 
 import handle from 'config/handle';
-import route from 'app/common/route';
 
 const config = {
     default: 'app.home',
@@ -24,11 +23,11 @@ const config = {
         // 首页
         {state: 'app.home'},
         // 列表页
-        {state: 'app.position', type: 'blank'},
-        {state: 'app.position.index'},
+        {state: 'app.demo', type: 'blank'},
+        {state: 'app.demo.index'},
+        {state: 'app.demo.detail',params:'/:id'},
 
 
     ]
 };
-const routes = route(config);
-export default routes;
+export default config;

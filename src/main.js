@@ -8,13 +8,17 @@ import underscore from 'underscore';
 import 'app/assets/style/main.less';
 import 'font-awesome/less/font-awesome.less';
 import 'weui';
+import axios from 'axios';
+import vueAxiosResource from 'vue-axios-resource';
+import routesDesign from 'vue-routes-design';
+
 // 自定义文件
 import main from 'app/main.vue';
-import routes from 'config/route';
-
+import routeConfig from 'config/route';
 import storeConfig from 'app/common/store/index';
 import myTool from 'app/common/myTool/index';
 import 'config/global';
+import interceptor from 'config/interceptor';
 
 window.global_data = {
     //除非需要写死域名的地方才会用到，否则需用location.origin动态获取
@@ -33,9 +37,15 @@ window._ = underscore;
 Vue.use(Router);
 Vue.use(MintUI);
 Vue.use(Vuex);
+Vue.use(vueAxiosResource,{
+    handler:axios,
+    baseUrl:'/api/',
+    interceptor:interceptor
+});
 // vuex状态
 const store = new Vuex.Store(storeConfig);
 // 路由
+var routes = routesDesign.create(routeConfig);
 const router = new Router({routes});
 // 挂载dom
 const root = document.createElement('div');

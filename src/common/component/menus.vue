@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="weui-grids">
-        <span class="weui-grid" 
+    <div>
+        <span class="weui-grid"
               @click="linkTo(menuItem)"
               v-for="menuItem in config">
             <div class="weui-grid__icon">
@@ -24,7 +24,20 @@ export default {
   },
   methods:{
       linkTo(item){
-          this.$router.push({name:item.link})
+          // 跳到系统外的某个链接
+          if(item.link){
+            location.href = item.link;
+            return;
+          }
+          // 系统内路由切换
+          if(item.routeName){
+              this.$router.push({name:item.routeName});
+              return;
+          }
+          if(item.route){
+              this.$router.push(item.route);
+              return;
+          }
       }
   }
 };

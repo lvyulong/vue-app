@@ -28,6 +28,7 @@
             model:String
         },
         computed:{
+            // 做了一层转换，因为后端返回的数据key跟框架中指定的key不一致
             validOptions:function () {
                 let options = [];
                 var that = this;
