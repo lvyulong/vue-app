@@ -1,6 +1,8 @@
 <template>
     <div>
-        测试页面-详情页
+        <div class="mt2rem danger padding1rem bd-b">
+            测试页面-详情页
+        </div>
     </div>
 </template>
 

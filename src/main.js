@@ -5,9 +5,10 @@ import Router from 'vue-router';
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import underscore from 'underscore';
-import 'app/assets/style/main.less';
 import 'font-awesome/less/font-awesome.less';
 import 'weui';
+import 'lv-common-css/dist/style/mobile.css';
+import 'app/assets/style/main.less';
 import axios from 'axios';
 import vueAxiosResource from 'vue-axios-resource';
 import routesDesign from 'vue-routes-design';
