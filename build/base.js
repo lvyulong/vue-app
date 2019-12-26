@@ -11,7 +11,7 @@ const webpackBaseConfig = {
     // 生成入口html
     new HtmlWebpackPlugin({
         template:'index.html',
-        favicon:path.resolve(__dirname,'../favicon.ico')
+        // favicon:path.resolve(__dirname,'../favicon.ico')
     })
   ],
   resolve:{
@@ -56,7 +56,7 @@ const webpackBaseConfig = {
               limit: 10000,
               name: `[name].[ext]`,
               outputPath:`lib${CURRENT_VERSION}/image`,
-              publicPath:process.env.NODE_ENV=='production'?`/app/lib${CURRENT_VERSION}/image/`:`/lib${CURRENT_VERSION}/image/`,
+              publicPath:process.env.NODE_ENV=='production'?`/{{name}}/lib${CURRENT_VERSION}/image/`:`/lib${CURRENT_VERSION}/image/`,
           }
         }
       },
@@ -69,7 +69,7 @@ const webpackBaseConfig = {
               limit: 10000,
               name: `[name].[ext]`,
               outputPath:`lib${CURRENT_VERSION}/font`,
-              publicPath:process.env.NODE_ENV=='production'?`/app/lib${CURRENT_VERSION}/font/`:`/lib${CURRENT_VERSION}/font/`,
+              publicPath:process.env.NODE_ENV=='production'?`/{{name}}/lib${CURRENT_VERSION}/font/`:`/lib${CURRENT_VERSION}/font/`,
           }
         }
       }

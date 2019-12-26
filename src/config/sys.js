@@ -1,6 +1,7 @@
 
 export default {
-    sysName:'App Demo',
-
+    sysName:'{{sysName}}',
+    // api基础路由
+    sysApiBase:'{{baseUrl}}',
 
 }

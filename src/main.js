@@ -19,15 +19,16 @@ import routeConfig from 'config/route';
 import storeConfig from 'app/common/store/index';
 import myTool from 'app/common/myTool/index';
 import 'config/global';
+import sys from 'config/sys';
 import interceptor from 'config/interceptor';
 
 window.global_data = {
     //除非需要写死域名的地方才会用到，否则需用location.origin动态获取
     domain: {
-        // dev: 'http://xxx.xxx.xxx.com',
-        // prod: 'http://xxx.xxx.xxx.com',
+        dev: 'http://{{domain}}',
+        prod: '{{prod}}',
     },
-    // devIp: '10.21.109.77'
+    devIp: '{{ip}}',
 };
 if (location.hostname === 'localhost' || location.hostname === global_data.devIp) {
     global_data.isDev = 1;
@@ -40,7 +41,7 @@ Vue.use(MintUI);
 Vue.use(Vuex);
 Vue.use(vueAxiosResource,{
     handler:axios,
-    baseUrl:'/api/',
+    baseUrl:sys.sysApiBase,
     interceptor:interceptor
 });
 // vuex状态

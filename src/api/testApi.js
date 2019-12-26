@@ -1,6 +1,6 @@
 import Vue from 'vue';
 const testApi = new Vue.Resource({
-    url: 'test',
+    url: '/{{name}}/test',
     actions: [
 
 
