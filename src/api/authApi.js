@@ -17,6 +17,16 @@ const authApi = new Vue.Resource({
             method:'GET',
             url:'current'
         },
+        {
+            name:'base',
+            method:'GET',
+            url:'base'
+        },
+        {
+            name:'pre',
+            method:'POST',
+            url:'pre'
+        },
 
     ]
 });
