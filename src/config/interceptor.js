@@ -26,7 +26,7 @@ export default {
                     }
                 }
             }
-            return Promise.reject(error);
+            return Promise.reject(error.response);
         }
     }
 };
