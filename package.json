@@ -19,7 +19,7 @@
     "font-awesome": "^4.7.0",
     "lv-common-css": "^1.3.3",
     "mint-ui": "^2.2.13",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "vue": "^2.5.16",
     "vue-axios-resource": "^2.0.1",
     "vue-router": "^3.0.1",
